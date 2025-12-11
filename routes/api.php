@@ -19,7 +19,7 @@ Route::middleware(['auth:sanctum'])->group(function(){
     Route::put('/flights/edit/{flight}',[FlightController::class,'update']);
     Route::delete('/flights/{flight}',[FlightController::class,'destroy']);
     Route::get('/messages',[MessageController::class,'index']);
-    Route::get('/messages/{message}',[MessageController::class,'show']);
+    Route::delete('/messages/{message}',[MessageController::class,'show']);
     Route::get('/bookings',[BookingController::class,'showBookings']);
     Route::put('/bookings/{booking}',[BookingController::class,'update']);
 });
